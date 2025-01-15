@@ -1,0 +1,238 @@
+:root {  
+  /* Tema Escuro */
+  --primary-color-dark: #ffffff;         /* Cor principal (Branca) */
+  --secondary-color-dark: #cecece;        /* Cor secundária (Cinza claro) */
+  --background-dark: #010409;            /* Cor de fundo principal (Fundo muito escuro) */
+  --background-dark-secondary: #0d1117;  /* Cor de fundo secundário (Escuro profundo) */
+  --text-dark: #f8f9fa;                  /* Cor do texto (Texto claro para fundo escuro) */
+  --text-dark-muted: #6c757d;            /* Cor do texto desabilitado (Cinza médio) */
+  --text-dark-accent: #adb5bd;           /* Cor de texto para seções especiais */
+  
+  /* Cores adicionais */
+  --highlight-color: #3BE477;            /* Cor de destaque */
+  --highlight-color-light: #262c36;      /* Cor de destaque em tons mais claros */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background-dark);  
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 100dvw;
+  max-width: 1920px;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+}
+
+header {
+  height: 70px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  color: var(--text-dark);
+}
+
+#open-menu-mobile {
+  font-size: 1.6em;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+  display: flex;
+  position: absolute;
+  left: 20px;
+  display: none;
+}
+
+#open-menu-mobile:hover {
+  color: var(--highlight-color);
+}
+
+header h2 {
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+}
+
+header ul {
+  display: flex;  
+  list-style: none;
+  gap: 30px;    
+}
+
+header ul a {  
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-dark);  
+  transition: .2s ease-in-out;  
+}
+
+header ul a:hover {
+  color: var(--highlight-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;  
+}
+
+main section {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+  padding: 30px;
+}
+
+.about-title {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.title-section {
+  font-family: "JetBrains Mono";
+  font-weight: bold;
+  color: var(--text-dark);
+}
+
+.subtitle-section {
+  font-family: "Cascadia Code";
+  font-weight: bold;
+  color: var(--text-dark-accent);
+}
+
+.about-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-description img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-description p {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+  font-family: "Cascadia Code";
+  color: var(--text-dark-accent);
+  font-weight: bold;
+}
+
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 1920px;
+  gap: 30px;
+}
+
+.icons {
+  min-width: 110px;
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background-dark-secondary);  
+  gap: 30px;
+  color: var(--text-dark);
+  border-radius: 10px;
+  transition: .2s ease-in-out;
+  border-bottom: 5px solid var(--primary-color-dark);
+  text-decoration: none;
+}
+
+.icons:hover {
+  color: var(--highlight-color);
+  border-color: var(--highlight-color);  
+}
+
+.icons i {
+  font-size: 3em;  
+}
+
+.icons label {
+  font-family: "Fira Code";
+  text-transform: uppercase;
+  font-weight: bold;  
+  font-size: .9em;
+}
+
+.project {
+  width: 100%;
+  max-width: 400px;
+  background-color: var(--background-dark-secondary);    
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.project:hover {
+  transform: scale(1.1);
+}
+
+.project img {
+  width: 100%;
+}
+
+.project-txt {
+  display: flex;
+  flex-direction: column;  
+  padding: 5px 5px 10px 5px;
+}
+
+.project-txt h3 {
+  text-align: center;
+  color: var(--primary-color-dark);
+  font-family: "Fira Code";  
+  font-weight: bold;
+  font-size: 1em;
+  height: 20px;    
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  font-family: "JetBrains Mono";
+  color: var(--text-dark);
+}
+
+
+@media (max-width: 800px) {
+  header {
+    justify-content: center;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #open-menu-mobile {
+    display: flex;
+  }
+}
