@@ -112,7 +112,7 @@ main section {
 }
 
 .subtitle-section {
-  font-family: "Cascadia Code";
+  font-family: "Fira Code";
   font-weight: bold;
   color: var(--text-dark-accent);
 }
@@ -136,7 +136,7 @@ main section {
   width: 100%;
   max-width: 900px;
   text-align: center;
-  font-family: "Cascadia Code";
+  font-family: "Fira Code";
   color: var(--text-dark-accent);
   font-weight: bold;
 }
